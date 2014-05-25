@@ -77,6 +77,9 @@ df <- df[,cols]
 names(df) <- gsub("-", "_", names(df))
 names(df) <- gsub("\\(\\)", "", names(df))
 
+## Remove underscores to agree with Dr.Leek's rules 
+names(df) <- gsub("_", "", names(df))
+
 ## Create a new tidy data.frame with average of each variable for each subject
 ## and each activity
 dfavg <- aggregate(df[-1:-4], list(df$activity, df$subject), mean)
@@ -86,7 +89,7 @@ names(dfavg)[1:2] <- c("activity", "subject")
 
 ## Since the variables are different here, I am going to add a avg_ suffix
 ## to remind us these are averages
-names(dfavg)[-1:-2] <- paste("avg_", names(dfavg)[-1:-2], sep="")
+names(dfavg)[-1:-2] <- paste("avg", names(dfavg)[-1:-2], sep="")
 
 ## Write data.frames to files
 ## write.csv(df, "UCIHarMeansSTDs.csv", quote=T, row.names=F)

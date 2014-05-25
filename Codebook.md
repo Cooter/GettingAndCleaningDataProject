@@ -67,11 +67,9 @@ Lastly, we write dfavg to a CSV file called:
 ### Variables
 In taking the labels from the columns in the UCI Har Data Set, I have tried to
 retain as much of the original name as possible for a good correlation. I have
-had to remove the parenthesis following either std or mean, and I have had to
-change hyphens to underslashes as R's read.csv function does not read hyphens 
-or parenthesis correctly. Then I have added the suffix "avg_" to remind 
-users that these are averages over several lines of data for each subject
-and each activity.
+had to remove the parenthesis following either std or mean, and I have removed
+all hyphens from the names.Then I have added the suffix "avg" to each name as 
+a reminder to users that these are average values over each subject and activity.
 
 From the features info page of the UCI HAR Dataset
 The features selected for this database come from the accelerometer and 
@@ -98,71 +96,70 @@ Variable list:
 activity - The activity participated in: WALKING, WALKING_UPSTAIRS,
            WALKING_DOWNSTAIRS, SITTING, STANDING, or LAYING                  
 subject - The number identifying the subject from 1 to 30                   
-avg_tBodyAcc_mean_X           
-avg_tBodyAcc_mean_Y          
-avg_tBodyAcc_mean_Z
-avg_tBodyAcc_std_X           
-avg_tBodyAcc_std_Y            
-avg_tBodyAcc_std_Z           
-avg_tGravityAcc_mean_X        
-avg_tGravityAcc_mean_Y       
-avg_tGravityAcc_mean_Z        
-avg_tGravityAcc_std_X        
-avg_tGravityAcc_std_Y         
-avg_tGravityAcc_std_Z        
-avg_tBodyAccJerk_mean_X       
-avg_tBodyAccJerk_mean_Y      
-avg_tBodyAccJerk_mean_Z       
-avg_tBodyAccJerk_std_X       
-avg_tBodyAccJerk_std_Y        
-avg_tBodyAccJerk_std_Z       
-avg_tBodyGyro_mean_X          
-avg_tBodyGyro_mean_Y         
-avg_tBodyGyro_mean_Z          
-avg_tBodyGyro_std_X          
-avg_tBodyGyro_std_Y           
-avg_tBodyGyro_std_Z          
-avg_tBodyGyroJerk_mean_X      
-avg_tBodyGyroJerk_mean_Y     
-avg_tBodyGyroJerk_mean_Z      
-avg_tBodyGyroJerk_std_X      
-avg_tBodyGyroJerk_std_Y       
-avg_tBodyGyroJerk_std_Z      
-avg_tBodyAccMag_mean          
-avg_tBodyAccMag_std          
-avg_tGravityAccMag_mean       
-avg_tGravityAccMag_std       
-avg_tBodyAccJerkMag_mean      
-avg_tBodyAccJerkMag_std      
-avg_tBodyGyroMag_mean         
-avg_tBodyGyroMag_std         
-avg_tBodyGyroJerkMag_mean     
-avg_tBodyGyroJerkMag_std     
-avg_fBodyAcc_mean_X           
-avg_fBodyAcc_mean_Y          
-avg_fBodyAcc_mean_Z           
-avg_fBodyAcc_std_X           
-avg_fBodyAcc_std_Y            
-avg_fBodyAcc_std_Z           
-avg_fBodyAccJerk_mean_X       
-avg_fBodyAccJerk_mean_Y      
-avg_fBodyAccJerk_mean_Z       
-avg_fBodyAccJerk_std_X       
-avg_fBodyAccJerk_std_Y        
-avg_fBodyAccJerk_std_Z       
-avg_fBodyGyro_mean_X          
-avg_fBodyGyro_mean_Y         
-avg_fBodyGyro_mean_Z          
-avg_fBodyGyro_std_X          
-avg_fBodyGyro_std_Y           
-avg_fBodyGyro_std_Z          
-avg_fBodyAccMag_mean          
-avg_fBodyAccMag_std          
-avg_fBodyBodyAccJerkMag_mean  
-avg_fBodyBodyAccJerkMag_std  
-avg_fBodyBodyGyroMag_mean     
-avg_fBodyBodyGyroMag_std     
-avg_fBodyBodyGyroJerkMag_mean 
-avg_fBodyBodyGyroJerkMag_std 
+avgtBodyAccmeanX           
+avgtBodyAccmeanY          
+avgtBodyAccmeanZ
+avgtBodyAccstdX           
+avgtBodyAccstdY            
+avgtBodyAccstdZ           
+avgtGravityAccmeanX        
+avgtGravityAccmeanY       
+avgtGravityAccmeanZ        
+avgtGravityAccstdX        
+avgtGravityAccstdY         
+avgtGravityAccstdZ        
+avgtBodyAccJerkmeanX       
+avgtBodyAccJerkmeanY      
+avgtBodyAccJerkmeanZ       
+avgtBodyAccJerkstdX       
+avgtBodyAccJerkstdY        
+avgtBodyAccJerkstdZ       
+avgtBodyGyromeanX          
+avgtBodyGyromeanY         
+avgtBodyGyromeanZ          
+avgtBodyGyrostdX          
+avgtBodyGyrostdY           
+avgtBodyGyrostdZ          
+avgtBodyGyroJerkmeanX      
+avgtBodyGyroJerkmeanY     
+avgtBodyGyroJerkmeanZ      
+avgtBodyGyroJerkstdX      
+avgtBodyGyroJerkstdY       
+avgtBodyGyroJerkstdZ      
+avgtBodyAccMagmean          
+avgtBodyAccMagstd          
+avgtGravityAccMagmean       
+avgtGravityAccMagstd       
+avgtBodyAccJerkMagmean      
+avgtBodyAccJerkMagstd      
+avgtBodyGyroMagmean         
+avgtBodyGyroMagstd         
+avgtBodyGyroJerkMagmean     
+avgtBodyGyroJerkMagstd     
+avgfBodyAccmeanX           
+avgfBodyAccmeanY          
+avgfBodyAccmeanZ           
+avgfBodyAccstdX           
+avgfBodyAccstdY            
+avgfBodyAccstdZ           
+avgfBodyAccJerkmeanX       
+avgfBodyAccJerkmeanY      
+avgfBodyAccJerkmeanZ       
+avgfBodyAccJerkstdX       
+avgfBodyAccJerkstdY        
+avgfBodyAccJerkstdZ       
+avgfBodyGyromeanX          
+avgfBodyGyromeanY         
+avgfBodyGyromeanZ          
+avgfBodyGyrostdX          
+avgfBodyGyrostdY           
+avgfBodyGyrostdZ          
+avgfBodyAccMagmean          
+avgfBodyAccMagstd          
+avgfBodyBodyAccJerkMagmean  
+avgfBodyBodyAccJerkMagstd  
+avgfBodyBodyGyroMagmean     
+avgfBodyBodyGyroMagstd     
+avgfBodyBodyGyroJerkMagmean 
+avgfBodyBodyGyroJerkMagstd 
 
-### Processing Steps 
